@@ -7,8 +7,8 @@ account_sid = "YOUR KEY"
 auth_token = "YOUR KEY"
 
 weather_params = {
-    "lat": 75,
-    "lon": -20,
+    "lat": "Your Latitude",
+    "lon": "Your Longitude",
     "appid": api_key,
     "cnt": 4,
 }
@@ -16,7 +16,6 @@ weather_params = {
 response = requests.get(OWM_Endpoint, params=weather_params)
 response.raise_for_status()
 weather_data = response.json()
-# print(weather_data["list"][0]["weather"][0]["id"])
 
 will_rain = False
 for hour_data in weather_data["list"]:
@@ -28,7 +27,7 @@ if will_rain:
     message = client.messages \
         .create(
         body="It's going to rain today. Remember to bring an ☔️",
-        from_="+16266693069",
-        to="+919944180472"
+        from_="Twilio Phone Number",
+        to="User Phone Number"
     )
     print(message.status)
