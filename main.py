@@ -7,8 +7,8 @@ account_sid = "YOUR KEY"
 auth_token = "YOUR KEY"
 
 weather_params = {
-    "lat": "Your Latitude",
-    "lon": "Your Longitude",
+    "lat": "Your latitude",
+    "lon": "Your longitude",
     "appid": api_key,
     "cnt": 4,
 }
